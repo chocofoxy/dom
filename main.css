@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato|Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alatsi&display=swap');
+
+@font-face {
+  font-family: "BlackPanther";
+  src: url('./BLACK_PANTHER.ttf');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.logo {
+  text-transform: capitalize;
+  font-family: 'BlackPanther';
+  display: inline-block;
+  display:flex ;
+  align-items: center;
+  font-size: 46px ;
+  color: white;
+  animation-name: fadein;
+  animation-duration: 3s;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.bg {
+  background: white;
+  /* fallback for old browsers */
+  background-image: url("https://i.imgur.com/w9HSItk.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+}
+
+.bg2 {
+  background: #314755;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #26a0da, transparent, #4e4376);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #26a0da, transparent, #4e4376);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: relative;
+  background-size: cover;
+  animation-name: fadein;
+  animation-duration: 3s;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+}
+
+#music_name {
+  font-size: 16px ;
+  font-style: italic;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+}
+
+.message {
+  text-transform: capitalize;
+  font-family: 'Alatsi', sans-serif;
+  font-size: 52px ;
+  animation-name: fadein;
+  animation-duration: 2s;
+
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes color_change {
+	from { background-color: blue; }
+	to { background-color: red; }s

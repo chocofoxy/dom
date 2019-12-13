@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+  <style media="screen">
+    .bg {
+      background-image: url("./1097749.jpg");
+    }
+
+    .bg2 {
+      background: green;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, green, transparent, green);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, green, transparent, green);
+    }
+
+    .mapouter {
+      position: relative;
+      text-align: right;
+      height: 500px;
+      width: 600px;
+    }
+
+    .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      height: 500px;
+      width: 600px;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-200">
+  <div class="bg">
+    <div class="bg2 w-full px-4 ">
+      <div class="flex flex-wrap -mx-3 mb-2">
+        <h1 class="logo w-full md:w-1/2"> <svg fill="#FFFFFF" class="inline-block mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="75px" height="75px">
+            <path
+              d="M 29.625 2 C 22.394531 2 18.871094 5.601563 17.734375 9.75 C 16.769531 8.769531 15.304688 8 13.167969 8 C 9.601563 8 6 10.085938 6 14.75 C 6 16.617188 7.105469 18.375 8.632813 19.308594 C 7.363281 20.242188 6 21.710938 6 24 C 6 25.527344 6.460938 26.714844 7.109375 27.621094 C 7.902344 27.226563 8.796875 27 9.75 27 C 10.582031 27 11.417969 27.136719 12.21875 27.402344 C 12.953125 27.136719 13.726563 27 14.5 27 C 15.359375 27 16.210938 27.160156 17 27.472656 C 17.789063 27.160156 18.640625 27 19.5 27 C 20.359375 27 21.210938 27.160156 22 27.472656 C 22.789063 27.160156 23.640625 27 24.5 27 C 25.359375 27 26.210938 27.160156 27 27.472656 C 27.789063 27.160156 28.640625 27 29.5 27 C 30.359375 27 31.210938 27.160156 32 27.472656 C 32.789063 27.160156 33.640625 27 34.5 27 C 35.273438 27 36.046875 27.136719 36.78125 27.402344 C 37.578125 27.136719 38.417969 27 39.25 27 C 40.5625 27 41.769531 27.429688 42.738281 28.140625 C 42.816406 28.054688 42.910156 27.9375 43.019531 27.777344 C 43.996094 26.351563 44 24.882813 44 24.25 C 44 21.117188 42.742188 19.292969 41.308594 18.464844 C 41.921875 16.59375 42 14.109375 42 13 C 42 6.316406 37.144531 2 29.625 2 Z M 17.5 16 C 18.882813 16 20 17.117188 20 18.5 C 20 19.882813 18.882813 21 17.5 21 C 16.117188 21 15 19.882813 15 18.5 C 15 17.117188 16.117188 16 17.5 16 Z M 33.5 16 C 34.882813 16 36 17.117188 36 18.5 C 36 19.882813 34.882813 21 33.5 21 C 32.117188 21 31 19.882813 31 18.5 C 31 17.117188 32.117188 16 33.5 16 Z M 18 17 C 17.449219 17 17 17.449219 17 18 C 17 18.550781 17.449219 19 18 19 C 18.550781 19 19 18.550781 19 18 C 19 17.449219 18.550781 17 18 17 Z M 34 17 C 33.449219 17 33 17.449219 33 18 C 33 18.550781 33.449219 19 34 19 C 34.550781 19 35 18.550781 35 18 C 35 17.449219 34.550781 17 34 17 Z M 23 21 L 28 21 C 28.550781 21 29 21.449219 29 22 C 29 23.65625 27.65625 25 26 25 L 25 25 C 23.34375 25 22 23.65625 22 22 C 22 21.449219 22.449219 21 23 21 Z M 9.75 29 C 7.683594 29 6 30.570313 6 32.5 C 6 32.589844 6.011719 32.679688 6.035156 32.765625 L 10.035156 47.265625 C 10.15625 47.699219 10.550781 48 11 48 L 38 48 C 38.449219 48 38.84375 47.699219 38.964844 47.265625 L 42.964844 32.765625 C 42.988281 32.679688 43 32.589844 43 32.5 C 43 30.570313 41.316406 29 39.25 29 C 38.332031 29 37.476563 29.222656 36.75 29.566406 C 36.082031 29.214844 35.316406 29 34.5 29 C 33.582031 29 32.71875 29.257813 32 29.695313 C 31.28125 29.257813 30.417969 29 29.5 29 C 28.582031 29 27.71875 29.257813 27 29.695313 C 26.28125 29.257813 25.417969 29 24.5 29 C 23.582031 29 22.71875 29.257813 22 29.695313 C 21.28125 29.257813 20.417969 29 19.5 29 C 18.582031 29 17.71875 29.257813 17 29.695313 C 16.28125 29.257813 15.417969 29 14.5 29 C 13.683594 29 12.917969 29.214844 12.25 29.566406 C 11.523438 29.222656 10.667969 29 9.75 29 Z M 9.75 31 C 11.066406 31 11.890625 31.5625 12.15625 31.886719 L 14.695313 46 L 11.761719 46 L 8.007813 32.386719 C 8.078125 31.621094 8.847656 31 9.75 31 Z M 19.5 31 C 20.703125 31 21.742188 31.761719 22 32.625 C 21.992188 32.625 22.46875 46 22.46875 46 L 18.640625 46 L 17.152344 32.378906 C 17.492188 31.625 18.414063 31 19.5 31 Z M 29.5 31 C 30.59375 31 31.515625 31.628906 31.855469 32.390625 L 30.410156 46 L 26.53125 46 C 26.53125 46 27.007813 32.625 27 32.625 C 27.253906 31.761719 28.289063 31 29.5 31 Z M 39.25 31 C 40.152344 31 40.921875 31.621094 40.996094 32.386719 L 37.238281 46 L 34.304688 46 L 36.839844 31.886719 C 37.105469 31.5625 37.933594 31 39.25 31 Z" />
+          </svg>
+          <span> coke & popcorn </span> </h1>
+        <div class="flex flex-row-reverse w-full  logo md:w-1/2">
+          <audio id="music">
+            <source src="Rolling in the Deep.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <button type="button" id="next" class="mr-6 hover:cursor-pointer" name="button">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="step-forward" class="fill-current h-6 w-6 text-white svg-inline--fa fa-step-forward fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="currentColor" d="M384 44v424c0 6.6-5.4 12-12 12h-48c-6.6 0-12-5.4-12-12V291.6l-195.5 181C95.9 489.7 64 475.4 64 448V64c0-27.4 31.9-41.7 52.5-24.6L312 219.3V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12z"></path>
+            </svg> </button>
+          <button type="button" id="play" class="ml-3 mr-2 hover:cursor-pointer" name="button">
+            <svg id="pauseIcon" style="display:none" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pause" class="fill-current hover:cursor-pointer  h-6 w-6 text-white  svg-inline--fa fa-pause fa-w-14" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="currentColor"
+                d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"></path>
+            </svg>
+            <svg id="playIcon" style="display:block" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" class="fill-current hover:cursor-pointer h-6 w-6 text-white svg-inline--fa fa-play fa-w-14" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+            </svg>
+          </button>
+          <h3 id="music_name" class="mx-0"> Rolling in the Deep </h3>
+        </div>
+      </div>
+      <div class="bg-white w-full shadow-md">
+        <nav class="flex flex-col content-center justify-center sm:flex-row">
+          <a href="./index.html" class="text-gray-600 py-4 px-6 block uppercase  focus:outline-none  hover:text-green-500 border-b-2 hover:font-medium hover:border-green-500">
+            home
+          </a><a href="./contact.html" class="text-gray-600 py-4 px-6 block uppercase  focus:outline-none  hover:text-green-500 border-b-2 hover:font-medium hover:border-green-500">
+            contact us
+          </a><a href="./more.html" class="text-gray-600 py-4 px-6 block uppercase  focus:outline-none  hover:text-green-500 border-b-2 hover:font-medium hover:border-green-500">
+            more
+          </a>
+        </nav>
+      </div>
+      <div class="flex flex-wrap justify-center ">
+        <div class=" w-full md:w-1/2 my-6 ">
+          <h1 class="message text-white my-6 w-full text-center text-6xl w-full"> play and win a ticket to a movie </h1>
+          <div class="bg-white shadow-md p-3">
+            <canvas height="500"  width="700" class="w-full" id="canvas"></canvas>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-gray-500 text-xs p-6 my-6">
+        &copy;2019 - All rights reserved.
+      </p>
+</body>
+<script type="text/javascript">
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
+  function circle(x, y, radius, color) {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.closePath();
+  }
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  var height = canvas.height;
+  var width = canvas.width;
+  var pas = 1;
+  var colors = ['red', 'blue', 'orange', 'green', 'purple'];
+
+  var balls = [];
+
+  function initBalls() {
+    for (var i = 0; i < 20; i++) {
+      balls.push({
+        x: getRandomInt(width),
+        color: colors[getRandomInt(5)],
+        radius: getRandomInt(20)
+      });
+    }
+  }
+
+  initBalls();
+  setInterval(function() {
+    ctx.clearRect(0, 0, width, height);
+    for (var i = 0; i < balls.length; i++) {
+      circle(balls[i].x, pas, balls[i].radius, balls[i].color);
+      pas++;
+      canvas.addEventListener('click', function(e) {
+        if ( (e.clientX > balls[i].x - balls[i].radius) && (e.clientX < balls[i].x + balls[i].radius) &&  (e.clientY > balls[i].x - balls[i].radius) && (e.clientY < balls[i].x + balls[i].radius) ) {
+          alert("fgfg") ;
+        }
+      });
+      if (pas === height) {
+        pas = 0;
+        balls = []
+        initBalls();
+      }
+    }
+  }, 24);
+</script>
+<script async src="audio.js"></script>
+
+</html>
