@@ -80,6 +80,12 @@
       <div class="flex flex-wrap justify-center ">
         <div class=" w-full md:w-1/2 my-6 ">
           <h1 class="message text-white my-6 w-full text-center text-6xl w-full"> play and win a ticket to a movie </h1>
+          <div id="scoreBar" class="bg-white flex flex-wrap justify-around  my-2 shadow-md p-3">
+            <span class="color bg-black"> Score :
+            <span id="score">
+            </span>
+          </span>
+          </div>
           <div class="bg-white shadow-md p-3">
             <canvas height="500"  width="700" class="w-full" id="canvas"></canvas>
           </div>
@@ -101,27 +107,54 @@
     ctx.fill();
     ctx.closePath();
   }
+
   var canvas = document.getElementById('canvas');
   var ctx = canvas.getContext('2d');
   var height = canvas.height;
   var width = canvas.width;
   var pas = 1;
-  var colors = ['red', 'blue', 'orange', 'green', 'purple'];
 
+  var colors = [{ color : 'red' , point : -10 } , { color : 'blue' , point : 10 },
+                { color : 'green' , point : 5 } , { color : 'orange' , point : 0 } , { color : 'purple' , point : -5 } ];
+
+  var score = 0 ;
   var balls = [];
 
+  document.getElementById('score').innerHTML = score ;
+  colors.forEach( color => {
+    var colorSpan = document.createElement('SPAN') ;
+    colorSpan.innerHTML = color.point ;
+    colorSpan.style.backgroundColor = color.color ;
+    colorSpan.classList.add("color");
+    document.getElementById('scoreBar').appendChild(colorSpan)
+  });
+
+
   function initBalls() {
+    var x ;
     for (var i = 0; i < 20; i++) {
+      x = getRandomInt(5) ;
       balls.push({
         x: getRandomInt(width),
-        color: colors[getRandomInt(5)],
-        radius: getRandomInt(20)
+        color: colors[x].color ,
+        radius: getRandomInt(20) ,
+        points: colors[x].point
       });
     }
   }
 
   canvas.addEventListener('click', function(e) {
-    console.log(balls);
+    score = balls.reduce((a, b) =>  a + ( b.points || 0 ) , score ) ;
+    document.getElementById('score').innerHTML = score ;
+    if ( score > 300 ) {
+        alert(' You won !! ') ;
+        score = 0 ;
+        document.getElementById('score').innerHTML = score ;
+    } else if ( score <  0) {
+        alert(' You lost !! ') ;
+        score = 0 ;
+        document.getElementById('score').innerHTML = score ;
+    }
   });
 
   initBalls();
